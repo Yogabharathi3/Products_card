@@ -101,12 +101,12 @@ Make the card responsive with percentage-based widths or media queries.
 body, html {
   height: 100%;
   margin: 0;
-  background-color:grey; 
+  background-color: grey;
 }
 
 .caption {
   text-align: center;
-  color: yellow; 
+  color: yellow;
   font-size: 32px;
   margin-top: 20px;
 }
@@ -114,68 +114,81 @@ body, html {
 .container {
   display: flex;
   justify-content: center;
-  align-items: center;
-  flex-wrap: wrap; 
+  align-items: flex-start;
+  flex-wrap: wrap;
   padding: 20px;
 }
+
 .product-card {
-  background-color:blanchedalmond;
+  background-color: blanchedalmond;
   border: 1px solid whitesmoke;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   padding: 20px;
   margin: 20px;
   width: 250px;
-  box-sizing: border-box; 
+  height: 480px; 
+  box-sizing: border-box;
   text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; 
 }
 
 .product-card img {
   width: 100%;
-  height: auto;
+  height: 220px; 
+  object-fit: cover;
   border-radius: 8px;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 
 .product-card h2 {
-  font-size: 20px;
-  margin: 10px 0;
+  font-size: 18px;
+  margin: 8px 0;
 }
 
 .product-card p {
   font-size: 14px;
   color: #555;
-  margin: 10px 0;
+  margin: 8px 0;
+  flex-grow: 1; 
 }
 
 .product-card .price {
   font-size: 18px;
   color: #e53935;
-  margin: 10px 0;
+  margin: 8px 0;
 }
 
 .product-card button {
   background-color: #2874f0;
   color: #fff;
   border: none;
-  padding: 10px 20px;
+  padding: 8px 16px;
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s;
+  margin: 4px;
+  font-size: 14px;
 }
 
 .product-card button:hover {
   background-color: beige;
+  color: black;
 }
 
 @media (max-width: 500px) {
   .product-card {
     width: 90%;
+    height: auto; 
   }
 }
 ```
 ## Output:
-![image](https://github.com/user-attachments/assets/b88bf72d-b25f-46f8-bbba-eb7ef53ffa04)
+![image](https://github.com/user-attachments/assets/053ce37e-f973-4363-957f-f828382f7a98)
+
 
 ## Result:
 A product card layout similar to those found on real-time e-commerce platform like FlipKart using the CSS Box Model is replicated successfully.
